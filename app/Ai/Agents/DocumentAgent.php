@@ -4,17 +4,14 @@ namespace App\Ai\Agents;
 
 use Laravel\Ai\Contracts\Agent;
 use Laravel\Ai\Contracts\Conversational;
-use Laravel\Ai\Contracts\HasTools;
-use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Messages\Message;
 use Laravel\Ai\Promptable;
 use Laravel\Ai\Messages\UserMessage;
 use Laravel\Ai\Messages\AssistantMessage;
 use Stringable;
-use App\Ai\Tools\UserInfoTool;
 use App\Models\AgentConversation;
 
-class SupportAgent implements Agent, Conversational, HasTools
+class DocumentAgent implements Agent, Conversational
 {
     use Promptable;
 
@@ -37,33 +34,13 @@ class SupportAgent implements Agent, Conversational, HasTools
         return 'gemini';
     }
 
-    /**
-     * Get the instructions that the agent should follow.
-     */
     public function instructions(): Stringable|string
     {
-        return 'Você é um assistente de suporte inteligente. Você tem ferramentas para consultar informações sobre usuários do sistema. Além disso, o usuário pode enviar perguntas acompanhadas de um contexto extraído de seus documentos. Use esse contexto fornecido para responder com precisão sobre os documentos dele, e responda de forma cordial.';
+        return 'Você é um assistente de inteligência artificial especializado na Base de Conhecimento do usuário. O usuário vai enviar perguntas, e junto com a pergunta, um sistema (RAG) irá injetar um contexto extraído dos documentos dele. Use APENAS o contexto fornecido para responder com precisão. Sempre cite a Fonte e a Página da informação que você utilizou.';
     }
 
-    /**
-     * Get the list of messages comprising the conversation so far.
-     *
-     * @return Message[]
-     */
     public function messages(): iterable
     {
         return $this->history;
-    }
-
-    /**
-     * Get the tools available to the agent.
-     *
-     * @return Tool[]
-     */
-    public function tools(): iterable
-    {
-        return [
-            app(UserInfoTool::class),
-        ];
     }
 }

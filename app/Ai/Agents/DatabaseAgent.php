@@ -14,7 +14,7 @@ use Stringable;
 use App\Ai\Tools\UserInfoTool;
 use App\Models\AgentConversation;
 
-class SupportAgent implements Agent, Conversational, HasTools
+class DatabaseAgent implements Agent, Conversational, HasTools
 {
     use Promptable;
 
@@ -37,29 +37,16 @@ class SupportAgent implements Agent, Conversational, HasTools
         return 'gemini';
     }
 
-    /**
-     * Get the instructions that the agent should follow.
-     */
     public function instructions(): Stringable|string
     {
-        return 'Você é um assistente de suporte inteligente. Você tem ferramentas para consultar informações sobre usuários do sistema. Além disso, o usuário pode enviar perguntas acompanhadas de um contexto extraído de seus documentos. Use esse contexto fornecido para responder com precisão sobre os documentos dele, e responda de forma cordial.';
+        return 'Você é um assistente de CRM especializado em dados do banco. Você tem ferramentas para consultar informações sobre usuários do sistema, campanhas, e pipelines. Responda de forma clara e direta sobre os dados extraídos das ferramentas.';
     }
 
-    /**
-     * Get the list of messages comprising the conversation so far.
-     *
-     * @return Message[]
-     */
     public function messages(): iterable
     {
         return $this->history;
     }
 
-    /**
-     * Get the tools available to the agent.
-     *
-     * @return Tool[]
-     */
     public function tools(): iterable
     {
         return [

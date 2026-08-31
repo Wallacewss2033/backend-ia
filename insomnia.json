@@ -1,28 +1,28 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2026-08-28T00:00:00.000Z",
+  "__export_date": "2026-08-30T00:00:00.000Z",
   "__export_source": "insomnia.desktop.app:v2023.5.8",
   "resources": [
     {
       "_id": "wrk_backend_ia",
       "parentId": null,
-      "modified": 1700000000000,
-      "created": 1700000000000,
+      "modified": 1693353600000,
+      "created": 1693353600000,
       "name": "Backend IA",
-      "description": "API requests for the Laravel project",
+      "description": "API do Projeto IA (Laravel + Gemini)",
       "scope": "collection",
       "_type": "workspace"
     },
     {
-      "_id": "env_base",
+      "_id": "env_backend_ia",
       "parentId": "wrk_backend_ia",
-      "modified": 1700000000000,
-      "created": 1700000000000,
+      "modified": 1693353600000,
+      "created": 1693353600000,
       "name": "Base Environment",
       "data": {
-        "base_url": "http://localhost",
-        "token": "seu_token_aqui"
+        "base_url": "http://localhost/api",
+        "token": ""
       },
       "dataPropertyOrder": {
         "&": [
@@ -30,35 +30,35 @@
           "token"
         ]
       },
-      "color": null,
+      "color": "#7d69cb",
       "isPrivate": false,
-      "metaSortKey": 1700000000000,
+      "metaSortKey": 1693353600000,
       "_type": "environment"
     },
     {
       "_id": "fld_auth",
       "parentId": "wrk_backend_ia",
-      "modified": 1700000000000,
-      "created": 1700000000000,
+      "modified": 1693353600000,
+      "created": 1693353600000,
       "name": "Auth",
       "description": "",
       "environment": {},
       "environmentPropertyOrder": null,
-      "metaSortKey": -1700000000000,
+      "metaSortKey": -1693353600000,
       "_type": "request_group"
     },
     {
       "_id": "req_login",
       "parentId": "fld_auth",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/login",
-      "name": "Login",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/login",
+      "name": "1. Login",
       "description": "",
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"email\": \"teste@teste.com\",\n\t\"password\": \"password\"\n}"
+        "text": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -72,54 +72,17 @@
         }
       ],
       "authentication": {},
-      "metaSortKey": -1700000000000,
+      "metaSortKey": -100,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "req_logout",
+      "_id": "req_user",
       "parentId": "fld_auth",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/logout",
-      "name": "Logout",
-      "description": "",
-      "method": "POST",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Accept",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
-      "metaSortKey": -1600000000000,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_me",
-      "parentId": "fld_auth",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/user",
-      "name": "Me (Current User)",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/user",
+      "name": "2. Get Current User",
       "description": "",
       "method": "GET",
       "body": {},
@@ -134,35 +97,29 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1500000000000,
+      "metaSortKey": -50,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "fld_users",
+      "_id": "fld_chats",
       "parentId": "wrk_backend_ia",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "name": "Users CRUD",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "name": "Chats & Messages",
       "description": "",
       "environment": {},
       "environmentPropertyOrder": null,
-      "metaSortKey": -1600000000000,
+      "metaSortKey": -1693353500000,
       "_type": "request_group"
     },
     {
-      "_id": "req_user_list",
-      "parentId": "fld_users",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/users",
-      "name": "List Users",
+      "_id": "req_chat_index",
+      "parentId": "fld_chats",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/chats",
+      "name": "List Chats",
       "description": "",
       "method": "GET",
       "body": {},
@@ -177,28 +134,72 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1700000000000,
+      "metaSortKey": -100,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "req_user_create",
-      "parentId": "fld_users",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/users",
-      "name": "Create User",
+      "_id": "req_chat_store",
+      "parentId": "fld_chats",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/chats",
+      "name": "Create Chat",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_chat_show",
+      "parentId": "fld_chats",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/chats/1",
+      "name": "Show Chat (Messages)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_message_send",
+      "parentId": "fld_chats",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/messages/send",
+      "name": "Send Message",
       "description": "",
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"Novo Usuário\",\n\t\"email\": \"novo@teste.com\",\n\t\"password\": \"12345678\"\n}"
+        "text": "{\n  \"chat_id\": 1,\n  \"message\": \"Como criar um arquivo PDF?\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -215,23 +216,29 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1600000000000,
+      "metaSortKey": -70,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "req_user_show",
-      "parentId": "fld_users",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/users/1",
-      "name": "Show User",
+      "_id": "fld_docs",
+      "parentId": "wrk_backend_ia",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "name": "Documents",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693353400000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_docs_index",
+      "parentId": "fld_docs",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/documents",
+      "name": "List Documents",
       "description": "",
       "method": "GET",
       "body": {},
@@ -246,34 +253,35 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1500000000000,
+      "metaSortKey": -100,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "req_user_update",
-      "parentId": "fld_users",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/users/1",
-      "name": "Update User",
+      "_id": "req_docs_store",
+      "parentId": "fld_docs",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/documents",
+      "name": "Upload Document",
       "description": "",
-      "method": "PUT",
+      "method": "POST",
       "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"Usuário Editado\",\n\t\"email\": \"editado@teste.com\"\n}"
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "file",
+            "value": "",
+            "id": "pair_0",
+            "type": "file"
+          }
+        ]
       },
       "parameters": [],
       "headers": [
         {
           "name": "Content-Type",
-          "value": "application/json"
+          "value": "multipart/form-data"
         },
         {
           "name": "Accept",
@@ -284,23 +292,17 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1400000000000,
+      "metaSortKey": -90,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     },
     {
-      "_id": "req_user_delete",
-      "parentId": "fld_users",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/users/1",
-      "name": "Delete User",
+      "_id": "req_docs_delete",
+      "parentId": "fld_docs",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/documents/1",
+      "name": "Delete Document",
       "description": "",
       "method": "DELETE",
       "body": {},
@@ -315,52 +317,8 @@
         "type": "bearer",
         "token": "{{ _.token }}"
       },
-      "metaSortKey": -1300000000000,
+      "metaSortKey": -80,
       "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
-      "_type": "request"
-    },
-    {
-      "_id": "req_ai_chat",
-      "parentId": "wrk_backend_ia",
-      "modified": 1700000000000,
-      "created": 1700000000000,
-      "url": "{{ _.base_url }}/api/chat",
-      "name": "Chat Agent",
-      "description": "Endpoint to interact with the AI Agent",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n\t\"prompt\": \"Quantos usuários nós temos?\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Accept",
-          "value": "application/json"
-        }
-      ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
-      "metaSortKey": -1200000000000,
-      "isPrivate": false,
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "_type": "request"
     }
   ]
