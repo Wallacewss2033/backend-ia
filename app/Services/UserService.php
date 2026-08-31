@@ -46,4 +46,19 @@ class UserService
     {
         return $this->userRepository->delete($id);
     }
+
+    public function getUserByEmail(string $email): ?Model
+    {
+        return $this->userRepository->findByEmail($email);
+    }
+
+    public function getUserByField(string $field, mixed $value): ?Model
+    {
+        return $this->userRepository->findByField($field, $value);
+    }
+
+    public function countUsers(): int
+    {
+        return $this->userRepository->count();
+    }
 }

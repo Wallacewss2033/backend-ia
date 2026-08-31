@@ -12,4 +12,7 @@ interface UserRepositoryInterface
     public function create(array $data): Model;
     public function update(int $id, array $data): bool;
     public function delete(int $id): bool;
+    public function findByEmail(string $email): ?Model;
+    public function findByField(string $field, mixed $value): ?Model;
+    public function count(): int;
 }
