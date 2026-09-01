@@ -25,6 +25,11 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Contracts\DocumentRepositoryInterface::class,
             \App\Repositories\Eloquent\DocumentRepository::class
         );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\AppointmentRepositoryInterface::class,
+            \App\Repositories\AppointmentRepository::class
+        );
     }
 
     /**
@@ -32,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        \App\Models\Appointment::observe(\App\Observers\AppointmentObserver::class);
+        \App\Models\User::observe(\App\Observers\UserObserver::class);
     }
 }

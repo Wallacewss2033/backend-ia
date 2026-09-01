@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'google' => [
+        'credentials_json' => env('GOOGLE_SERVICE_ACCOUNT_JSON'),
+        'credentials_path' => env('GOOGLE_CALENDAR_CREDENTIALS', storage_path('app/google-service-account.json')),
+    ],
+
 ];

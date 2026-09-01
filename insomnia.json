@@ -320,6 +320,333 @@
       "metaSortKey": -80,
       "isPrivate": false,
       "_type": "request"
+    },
+    {
+      "_id": "fld_appointments",
+      "parentId": "wrk_backend_ia",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "name": "Appointments",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693353300000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_appointments_index",
+      "parentId": "fld_appointments",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/appointments",
+      "name": "List Appointments",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_appointments_store",
+      "parentId": "fld_appointments",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/appointments",
+      "name": "Create Appointment",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Reunião de Alinhamento\",\n  \"description\": \"Alinhamento sobre a nova campanha.\",\n  \"start_time\": \"2026-09-10 14:00:00\",\n  \"end_time\": \"2026-09-10 15:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_appointments_update",
+      "parentId": "fld_appointments",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/appointments/1",
+      "name": "Update Appointment",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Reunião Remarcada\",\n  \"start_time\": \"2026-09-11 14:00:00\",\n  \"end_time\": \"2026-09-11 15:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_appointments_delete",
+      "parentId": "fld_appointments",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/appointments/1",
+      "name": "Delete Appointment",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_logout",
+      "parentId": "fld_auth",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/logout",
+      "name": "3. Logout",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -40,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_chat_delete",
+      "parentId": "fld_chats",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/chats/1",
+      "name": "Delete Chat",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_users",
+      "parentId": "wrk_backend_ia",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693353200000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_users_index",
+      "parentId": "fld_users",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/users",
+      "name": "List Users",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_store",
+      "parentId": "fld_users",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/users",
+      "name": "Create User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Novo Usuário\",\n  \"email\": \"novo@example.com\",\n  \"password\": \"password\",\n  \"password_confirmation\": \"password\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_show",
+      "parentId": "fld_users",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/users/1",
+      "name": "Show User",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_update",
+      "parentId": "fld_users",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/users/1",
+      "name": "Update User",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Usuário Editado\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_delete",
+      "parentId": "fld_users",
+      "modified": 1693353600000,
+      "created": 1693353600000,
+      "url": "{{ _.base_url }}/users/1",
+      "name": "Delete User",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
     }
   ]
 }
