@@ -179,29 +179,35 @@ class UserInfoTool implements Tool
                 ->required(),
 
             // Parâmetros para action = "get"
-            'field' => $schema->string()->description('Campo de busca (ex: id, email, name).'),
-            'value' => $schema->string()->description('Valor do campo para busca exata.'),
+            'field' => $schema->string()->description('Campo de busca (ex: id, email, name).')->required(),
+            'value' => $schema->string()->description('Valor do campo para busca exata.')->required(),
 
             // Parâmetros para action = "filter_by_date"
             'date_operator' => $schema->string()
                 ->enum(['exact_date', 'after', 'before', 'between', 'today'])
-                ->description('Tipo de comparação temporal no created_at: exact_date (data exata), after (depois de), before (antes de), between (intervalo), today (hoje).'),
+                ->description('Tipo de comparação temporal no created_at: exact_date (data exata), after (depois de), before (antes de), between (intervalo), today (hoje).')
+                ->required(),
 
             'start_date' => $schema->string()
-                ->description('Data inicial ou exata no formato "YYYY-MM-DD" ou "YYYY-MM-DD HH:mm:ss".'),
+                ->description('Data inicial ou exata no formato "YYYY-MM-DD" ou "YYYY-MM-DD HH:mm:ss".')
+                ->required(),
 
             'end_date' => $schema->string()
-                ->description('Data final no formato "YYYY-MM-DD" (obrigatório apenas se date_operator = "between").'),
+                ->description('Data final no formato "YYYY-MM-DD" (obrigatório apenas se date_operator = "between").')
+                ->required(),
             
             'hour_operator' => $schema->string()
                 ->enum(['exact_hour', 'before', 'after'])
-                ->description('Tipo de comparação temporal no created_at: exact_hour (hora exata), before (antes de), after (depois de).'),
+                ->description('Tipo de comparação temporal no created_at: exact_hour (hora exata), before (antes de), after (depois de).')
+                ->required(),
 
             'hour' => $schema->string()
-                ->description('Hora no formato "HH" ou "HH:mm:ss".'),
+                ->description('Hora no formato "HH" ou "HH:mm:ss".')
+                ->required(),
 
             'end_hour' => $schema->string()
-                ->description('Hora final no formato "HH" ou "HH:mm:ss" (obrigatório apenas se hour_operator = "between").'),
+                ->description('Hora final no formato "HH" ou "HH:mm:ss" (obrigatório apenas se hour_operator = "between").')
+                ->required(),
             ];
     }
 }

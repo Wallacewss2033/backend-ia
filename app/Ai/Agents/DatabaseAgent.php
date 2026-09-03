@@ -12,6 +12,7 @@ use Laravel\Ai\Messages\UserMessage;
 use Laravel\Ai\Messages\AssistantMessage;
 use Stringable;
 use App\Ai\Tools\UserInfoTool;
+use App\Ai\Tools\AppointmentTool;
 use App\Models\AgentConversation;
 
 class DatabaseAgent implements Agent, Conversational, HasTools
@@ -39,7 +40,7 @@ class DatabaseAgent implements Agent, Conversational, HasTools
 
     public function instructions(): Stringable|string
     {
-        return 'Você é um assistente de CRM especializado em dados do banco. Você tem ferramentas para consultar informações sobre usuários do sistema, campanhas, e pipelines. Responda de forma clara e direta sobre os dados extraídos das ferramentas.';
+        return 'Você é um assistente de CRM especializado em dados do banco. Você tem ferramentas para consultar informações sobre usuários do sistema, agendamentos, e pipelines. Responda de forma clara e direta sobre os dados extraídos das ferramentas.';
     }
 
     public function messages(): iterable
@@ -51,6 +52,7 @@ class DatabaseAgent implements Agent, Conversational, HasTools
     {
         return [
             app(UserInfoTool::class),
+            app(AppointmentTool::class),
         ];
     }
 }
