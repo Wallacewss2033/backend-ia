@@ -2,28 +2,28 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\Category;
-use App\Repositories\Contracts\CategoryRepositoryInterface;
+use App\Models\Article;
+use App\Repositories\Contracts\ArticleRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryRepository implements CategoryRepositoryInterface
+class ArticleRepository implements ArticleRepositoryInterface
 {
-    protected Category $model;
+    protected Article $model;
 
-    public function __construct(Category $model)
+    public function __construct(Article $model)
     {
         $this->model = $model;
     }
 
     public function all(): Collection
     {
-        return $this->model->with('siteDomain')->get();
+        return $this->model->with(['siteDomain', 'author', 'category'])->get();
     }
 
     public function find(int $id): ?Model
     {
-        return $this->model->with('siteDomain')->findOrFail($id);
+        return $this->model->with(['siteDomain', 'author', 'category'])->findOrFail($id);
     }
 
     public function create(array $data): Model
@@ -33,14 +33,14 @@ class CategoryRepository implements CategoryRepositoryInterface
 
     public function update(int $id, array $data): bool
     {
-        $category = $this->model->findOrFail($id);
-        return $category->update($data);
+        $article = $this->model->findOrFail($id);
+        return $article->update($data);
     }
 
     public function delete(int $id): bool
     {
-        $category = $this->model->findOrFail($id);
-        return $category->delete();
+        $article = $this->model->findOrFail($id);
+        return $article->delete();
     }
 
     public function findByField(string $field, mixed $value): ?Model

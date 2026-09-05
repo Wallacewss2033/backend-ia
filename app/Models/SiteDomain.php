@@ -13,7 +13,7 @@ class SiteDomain extends Model
     protected $table = 'sites_domains';
 
     protected $fillable = [
-        'name',
+        'domain_url',
         'title',
         'description',
         'logo_url',

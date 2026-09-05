@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('sites_domains', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255)->unique();
+            $table->string('domain_url', 255)->unique();
             $table->string('title', 255);
             $table->text('description')->nullable();
             $table->string('logo_url', 500)->nullable();

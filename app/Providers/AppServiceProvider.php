@@ -35,6 +35,26 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Contracts\CategoryRepositoryInterface::class,
             \App\Repositories\Eloquent\CategoryRepository::class
         );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\SiteDomainRepositoryInterface::class,
+            \App\Repositories\Eloquent\SiteDomainRepository::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\AuthorRepositoryInterface::class,
+            \App\Repositories\Eloquent\AuthorRepository::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\ArticleRepositoryInterface::class,
+            \App\Repositories\Eloquent\ArticleRepository::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\Contracts\SeoMetaRepositoryInterface::class,
+            \App\Repositories\Eloquent\SeoMetaRepository::class
+        );
     }
 
     /**
