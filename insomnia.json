@@ -69,6 +69,10 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
       "authentication": {},
@@ -91,12 +95,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -50,
       "isPrivate": false,
       "_type": "request"
@@ -128,12 +133,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -100,
       "isPrivate": false,
       "_type": "request"
@@ -153,12 +159,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -90,
       "isPrivate": false,
       "_type": "request"
@@ -178,12 +185,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -80,
       "isPrivate": false,
       "_type": "request"
@@ -210,12 +218,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -70,
       "isPrivate": false,
       "_type": "request"
@@ -247,12 +256,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -100,
       "isPrivate": false,
       "_type": "request"
@@ -286,12 +296,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -90,
       "isPrivate": false,
       "_type": "request"
@@ -311,12 +322,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -80,
       "isPrivate": false,
       "_type": "request"
@@ -348,12 +360,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -100,
       "isPrivate": false,
       "_type": "request"
@@ -380,12 +393,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -90,
       "isPrivate": false,
       "_type": "request"
@@ -412,12 +426,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -80,
       "isPrivate": false,
       "_type": "request"
@@ -437,12 +452,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -70,
       "isPrivate": false,
       "_type": "request"
@@ -462,12 +478,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -40,
       "isPrivate": false,
       "_type": "request"
@@ -487,12 +504,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -60,
       "isPrivate": false,
       "_type": "request"
@@ -524,12 +542,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -100,
       "isPrivate": false,
       "_type": "request"
@@ -556,12 +575,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -90,
       "isPrivate": false,
       "_type": "request"
@@ -581,12 +601,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -80,
       "isPrivate": false,
       "_type": "request"
@@ -613,12 +634,13 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
-      },
+      "authentication": {},
       "metaSortKey": -70,
       "isPrivate": false,
       "_type": "request"
@@ -638,12 +660,793 @@
         {
           "name": "Accept",
           "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
         }
       ],
-      "authentication": {
-        "type": "bearer",
-        "token": "{{ _.token }}"
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_categories",
+      "parentId": "wrk_backend_ia",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "name": "Categories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693353000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_categories_0",
+      "parentId": "fld_categories",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/categories",
+      "name": "List Categories",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_categories_1",
+      "parentId": "fld_categories",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/categories",
+      "name": "Create Categories",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"name\": \"Tecnologia\",\n  \"slug\": \"tecnologia\",\n  \"description\": \"Categoria sobre tecnologia e inovação.\"\n}"
       },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_categories_2",
+      "parentId": "fld_categories",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/categories/1",
+      "name": "Show Categories",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_categories_3",
+      "parentId": "fld_categories",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/categories/1",
+      "name": "Update Categories",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"name\": \"Tecnologia Atualizada\",\n  \"slug\": \"tecnologia-atualizada\",\n  \"description\": \"Descrição atualizada.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_categories_4",
+      "parentId": "fld_categories",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/categories/1",
+      "name": "Delete Categories",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_authors",
+      "parentId": "wrk_backend_ia",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "name": "Authors",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693352900000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_authors_0",
+      "parentId": "fld_authors",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/authors",
+      "name": "List Authors",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_authors_1",
+      "parentId": "fld_authors",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/authors",
+      "name": "Create Authors",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"name\": \"João da Silva\",\n  \"slug\": \"joao-da-silva\",\n  \"bio\": \"Especialista em marketing digital.\",\n  \"avatar_url\": \"https://example.com/avatar.jpg\",\n  \"social_links\": {\n    \"twitter\": \"@joaosilva\",\n    \"linkedin\": \"/in/joaosilva\"\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_authors_2",
+      "parentId": "fld_authors",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/authors/1",
+      "name": "Show Authors",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_authors_3",
+      "parentId": "fld_authors",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/authors/1",
+      "name": "Update Authors",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"name\": \"João da Silva Editado\",\n  \"slug\": \"joao-da-silva-editado\",\n  \"bio\": \"Nova biografia.\",\n  \"avatar_url\": \"https://example.com/avatar_new.jpg\",\n  \"social_links\": {\n    \"twitter\": \"@joaosilva2\"\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_authors_4",
+      "parentId": "fld_authors",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/authors/1",
+      "name": "Delete Authors",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_articles",
+      "parentId": "wrk_backend_ia",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "name": "Articles",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693352800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_articles_0",
+      "parentId": "fld_articles",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/articles",
+      "name": "List Articles",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_articles_1",
+      "parentId": "fld_articles",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/articles",
+      "name": "Create Articles",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"author_id\": 1,\n  \"category_id\": 1,\n  \"title\": \"Como otimizar seu site para SEO\",\n  \"slug\": \"como-otimizar-seu-site-para-seo\",\n  \"summary\": \"Aprenda as melhores dicas de SEO.\",\n  \"content\": \"Conteúdo completo do artigo com várias dicas sobre SEO...\",\n  \"featured_image_url\": \"https://example.com/image.jpg\",\n  \"featured_image_alt\": \"Imagem de otimização de SEO\",\n  \"status\": \"draft\",\n  \"published_at\": \"2026-09-04 12:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_articles_2",
+      "parentId": "fld_articles",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/articles/1",
+      "name": "Show Articles",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_articles_3",
+      "parentId": "fld_articles",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/articles/1",
+      "name": "Update Articles",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"site_domain_id\": 1,\n  \"author_id\": 1,\n  \"category_id\": 1,\n  \"title\": \"Título Editado\",\n  \"slug\": \"titulo-editado\",\n  \"summary\": \"Resumo editado.\",\n  \"content\": \"Conteúdo atualizado...\",\n  \"featured_image_url\": \"https://example.com/image_new.jpg\",\n  \"featured_image_alt\": \"Nova imagem\",\n  \"status\": \"published\",\n  \"published_at\": \"2026-09-05 10:00:00\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_articles_4",
+      "parentId": "fld_articles",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/articles/1",
+      "name": "Delete Articles",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_sites_domains",
+      "parentId": "wrk_backend_ia",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "name": "Site Domains",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693352700000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_sites_domains_0",
+      "parentId": "fld_sites_domains",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/sites-domains",
+      "name": "List Site Domains",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sites_domains_1",
+      "parentId": "fld_sites_domains",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/sites-domains",
+      "name": "Create Site Domains",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"domain_url\": \"meusite.com.br\",\n  \"title\": \"Meu Site Oficial\",\n  \"description\": \"O melhor site sobre tecnologia.\",\n  \"logo_url\": \"https://meusite.com.br/logo.png\",\n  \"favicon_url\": \"https://meusite.com.br/favicon.ico\",\n  \"primary_color\": \"#FF5733\",\n  \"status\": \"draft\",\n  \"dns_verified_at\": \"2026-09-01 10:00:00\",\n  \"google_ads_id\": \"AW-123456789\",\n  \"google_tag_manager_id\": \"GTM-XXXXXXX\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sites_domains_2",
+      "parentId": "fld_sites_domains",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/sites-domains/1",
+      "name": "Show Site Domains",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sites_domains_3",
+      "parentId": "fld_sites_domains",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/sites-domains/1",
+      "name": "Update Site Domains",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"domain_url\": \"meusite-atualizado.com.br\",\n  \"title\": \"Meu Site Oficial Atualizado\",\n  \"description\": \"O melhor site sobre tecnologia - Atualizado.\",\n  \"logo_url\": \"https://meusite.com.br/logo_new.png\",\n  \"favicon_url\": \"https://meusite.com.br/favicon_new.ico\",\n  \"primary_color\": \"#000000\",\n  \"status\": \"approved\",\n  \"dns_verified_at\": \"2026-09-02 10:00:00\",\n  \"google_ads_id\": \"AW-987654321\",\n  \"google_tag_manager_id\": \"GTM-YYYYYYY\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sites_domains_4",
+      "parentId": "fld_sites_domains",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/sites-domains/1",
+      "name": "Delete Site Domains",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_seo_metas",
+      "parentId": "wrk_backend_ia",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "name": "Seo Metas",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1693352600000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_seo_metas_0",
+      "parentId": "fld_seo_metas",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/seo-metas",
+      "name": "List Seo Metas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_seo_metas_1",
+      "parentId": "fld_seo_metas",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/seo-metas",
+      "name": "Create Seo Metas",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"article_id\": 1,\n  \"meta_title\": \"Guia de SEO 2026\",\n  \"meta_description\": \"Aprenda tudo sobre SEO neste guia completo.\",\n  \"canonical_url\": \"https://meusite.com.br/como-otimizar-seu-site-para-seo\",\n  \"og_image_url\": \"https://meusite.com.br/og-image.jpg\",\n  \"robots_directives\": \"index, follow\",\n  \"google_ads_conversion_label\": \"abc123def456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_seo_metas_2",
+      "parentId": "fld_seo_metas",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/seo-metas/1",
+      "name": "Show Seo Metas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_seo_metas_3",
+      "parentId": "fld_seo_metas",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/seo-metas/1",
+      "name": "Update Seo Metas",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"article_id\": 1,\n  \"meta_title\": \"Guia de SEO 2026 - Atualizado\",\n  \"meta_description\": \"Descrição atualizada sobre SEO.\",\n  \"canonical_url\": \"https://meusite.com.br/seo-2026\",\n  \"og_image_url\": \"https://meusite.com.br/og-image-new.jpg\",\n  \"robots_directives\": \"noindex, nofollow\",\n  \"google_ads_conversion_label\": \"xyz789\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_seo_metas_4",
+      "parentId": "fld_seo_metas",
+      "modified": 1788534067241,
+      "created": 1788534067241,
+      "url": "{{ _.base_url }}/seo-metas/1",
+      "name": "Delete Seo Metas",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer 1|kXQyYgpVi3Iyz5hqqEWY9yslY7yoV2XVdKaErN879a3d9df0"
+        }
+      ],
+      "authentication": {},
       "metaSortKey": -60,
       "isPrivate": false,
       "_type": "request"
