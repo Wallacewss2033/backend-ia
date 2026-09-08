@@ -48,6 +48,12 @@ class StoreSiteDomainRequest extends FormRequest
                 'domain_url' => $domain,
             ]);
         }
+
+        if (!$this->has('status') || empty($this->status)) {
+            $this->merge([
+                'status' => 'draft',
+            ]);
+        }
     }
 
     public function withValidator($validator): void

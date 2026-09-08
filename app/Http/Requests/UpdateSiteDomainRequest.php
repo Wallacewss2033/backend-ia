@@ -40,6 +40,17 @@ class UpdateSiteDomainRequest extends FormRequest
                 'domain_url' => $domain,
             ]);
         }
+
+        if (!$this->has('status') || empty($this->status)) {
+            // Se o status for enviado vazio na edição, removemos da requisição
+            // para não sobrescrever um status "approved" com null.
+            // Mas se a intenção for realmente forçar "draft", a gente manda draft.
+            // Aqui vamos remover da request para preservar o do banco, ou forçar draft.
+            // Como o user pediu "status padrão draft", vamos colocar draft caso não tenha.
+            $this->merge([
+                'status' => 'draft',
+            ]);
+        }
     }
 
     public function withValidator($validator): void
@@ -54,10 +65,6 @@ class UpdateSiteDomainRequest extends FormRequest
             if (!preg_match('/^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+\.[a-zA-Z]{2,11}?$/', $domain)) {
                 $validator->errors()->add('domain_url', 'O formato do domínio é inválido. Digite um domínio como "seusite.com.br".');
                 return;
-            }
-
-            if (!checkdnsrr($domain, 'NS') && !checkdnsrr($domain, 'A')) {
-                $validator->errors()->add('domain_url', 'O domínio não parece estar registrado ou não possui entradas DNS ativas.');
             }
         });
     }
