@@ -49,6 +49,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Website Management - Authors
     Route::get('/authors', [\App\Http\Controllers\AuthorController::class, 'index']);
     Route::post('/authors', [\App\Http\Controllers\AuthorController::class, 'store']);
+    Route::post('/authors/upload-image', [\App\Http\Controllers\AuthorController::class, 'uploadImage']);
     Route::get('/authors/{id}', [\App\Http\Controllers\AuthorController::class, 'show']);
     Route::put('/authors/{id}', [\App\Http\Controllers\AuthorController::class, 'update']);
     Route::delete('/authors/{id}', [\App\Http\Controllers\AuthorController::class, 'destroy']);
@@ -56,6 +57,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Website Management - Articles
     Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']);
     Route::post('/articles', [\App\Http\Controllers\ArticleController::class, 'store']);
+    Route::post('/articles/upload-image', [\App\Http\Controllers\ArticleController::class, 'uploadImage']);
     Route::get('/articles/{id}', [\App\Http\Controllers\ArticleController::class, 'show']);
     Route::put('/articles/{id}', [\App\Http\Controllers\ArticleController::class, 'update']);
     Route::delete('/articles/{id}', [\App\Http\Controllers\ArticleController::class, 'destroy']);

@@ -5,9 +5,11 @@ namespace App\Services;
 use App\Repositories\Contracts\AuthorRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\UploadsImagesToFirebase;
 
 class AuthorService
 {
+    use UploadsImagesToFirebase;
     protected AuthorRepositoryInterface $authorRepository;
 
     public function __construct(AuthorRepositoryInterface $authorRepository)

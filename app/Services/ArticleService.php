@@ -5,9 +5,11 @@ namespace App\Services;
 use App\Repositories\Contracts\ArticleRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\UploadsImagesToFirebase;
 
 class ArticleService
 {
+    use UploadsImagesToFirebase;
     protected ArticleRepositoryInterface $articleRepository;
 
     public function __construct(ArticleRepositoryInterface $articleRepository)

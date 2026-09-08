@@ -56,7 +56,8 @@ class SiteDomainController extends Controller
         try {
             $result = $this->siteDomainService->uploadImageToFirebase(
                 $request->file('image'),
-                $request->input('type')
+                $request->input('type'),
+                'sites-domains'
             );
 
             return response()->json([
