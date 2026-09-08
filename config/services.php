@@ -40,4 +40,9 @@ return [
         'credentials_path' => env('GOOGLE_CALENDAR_CREDENTIALS', storage_path('app/google-service-account.json')),
     ],
 
+    'render' => [
+        'api_key' => env('RENDER_API_KEY'),
+        'service_id' => env('RENDER_SERVICE_ID'),
+    ],
+
 ];

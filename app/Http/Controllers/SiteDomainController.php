@@ -70,6 +70,8 @@ class SiteDomainController extends Controller
         }
     }
 
+    use \App\Traits\ManagesRenderDomains;
+
     public function verifyDns(int $id): JsonResponse
     {
         $siteDomain = $this->siteDomainService->getSiteDomainById($id);
@@ -81,16 +83,25 @@ class SiteDomainController extends Controller
 
         // Verificação de Registro Ativo (DNS)
         if (checkdnsrr($domain, 'NS') || checkdnsrr($domain, 'A')) {
-            $this->siteDomainService->updateSiteDomain($id, [
-                'status' => 'approved',
-                'dns_verified_at' => now(),
-            ]);
             
+            $renderResult = $this->addDomainToRender($domain);
+
+            if ($renderResult['success']) {
+                $this->siteDomainService->updateSiteDomain($id, [
+                    'status' => 'approved',
+                    'dns_verified_at' => now(),
+                ]);
+                
+                return response()->json([
+                    'message' => $renderResult['message'],
+                    'status' => 'approved',
+                    'dns_verified_at' => now(),
+                ]);
+            }
+
             return response()->json([
-                'message' => 'Domínio registrado e DNS verificado com sucesso!',
-                'status' => 'approved',
-                'dns_verified_at' => now(),
-            ]);
+                'message' => $renderResult['message'],
+            ], $renderResult['status_code'] ?? 422);
         }
 
         return response()->json([
