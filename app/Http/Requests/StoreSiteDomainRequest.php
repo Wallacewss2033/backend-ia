@@ -65,11 +65,6 @@ class StoreSiteDomainRequest extends FormRequest
                 return;
             }
 
-            // Verificação de Registro Ativo (DNS)
-            // Checa registro NS (Name Server) ou A, garantindo que o domínio exista na internet.
-            if (!checkdnsrr($domain, 'NS') && !checkdnsrr($domain, 'A')) {
-                $validator->errors()->add('domain_url', 'O domínio não parece estar registrado ou não possui entradas DNS ativas.');
-            }
         });
     }
 }
