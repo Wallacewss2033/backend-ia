@@ -13,6 +13,7 @@ use Laravel\Ai\Messages\AssistantMessage;
 use Stringable;
 use App\Ai\Tools\UserInfoTool;
 use App\Ai\Tools\AppointmentTool;
+use App\Ai\Tools\ContentManagerTool;
 use App\Models\AgentConversation;
 
 class DatabaseAgent implements Agent, Conversational, HasTools
@@ -53,6 +54,7 @@ class DatabaseAgent implements Agent, Conversational, HasTools
         return [
             app(UserInfoTool::class),
             app(AppointmentTool::class),
+            app(ContentManagerTool::class),
         ];
     }
 }
