@@ -65,10 +65,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/sites-domains', [\App\Http\Controllers\SiteDomainController::class, 'store']);
     Route::get('/sites-domains/{id}', [\App\Http\Controllers\SiteDomainController::class, 'show']);
     Route::put('/sites-domains/{id}', [\App\Http\Controllers\SiteDomainController::class, 'update']);
+    Route::post('/sites-domains/upload-image', [\App\Http\Controllers\SiteDomainController::class, 'uploadImage']);
     Route::delete('/sites-domains/{id}', [\App\Http\Controllers\SiteDomainController::class, 'destroy']);
     Route::post('/sites-domains/{id}/verify-dns', [\App\Http\Controllers\SiteDomainController::class, 'verifyDns']);
 
-    // Website Management - SeoMetas
+    // SeoMetas
     Route::get('/seo-metas', [\App\Http\Controllers\SeoMetaController::class, 'index']);
     Route::post('/seo-metas', [\App\Http\Controllers\SeoMetaController::class, 'store']);
     Route::get('/seo-metas/{id}', [\App\Http\Controllers\SeoMetaController::class, 'show']);

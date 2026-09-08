@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSiteDomainRequest;
 use App\Http\Requests\UpdateSiteDomainRequest;
+use App\Http\Requests\UploadSiteDomainImageRequest;
 use App\Http\Resources\SiteDomainResource;
 use App\Services\SiteDomainService;
 use Illuminate\Http\JsonResponse;
@@ -48,6 +49,24 @@ class SiteDomainController extends Controller
     {
         $this->siteDomainService->deleteSiteDomain($id);
         return response()->json(null, 204);
+    }
+
+    public function uploadImage(UploadSiteDomainImageRequest $request): JsonResponse
+    {
+        try {
+            $result = $this->siteDomainService->uploadImageToFirebase(
+                $request->file('image'),
+                $request->input('type')
+            );
+
+            return response()->json([
+                'message' => 'Upload realizado com sucesso!',
+                'url' => $result['url'],
+                'path' => $result['path']
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 422);
+        }
     }
 
     public function verifyDns(int $id): JsonResponse
