@@ -24,7 +24,7 @@
     <!-- Header do Artigo -->
     <header class="mb-10 text-center">
         @if($article->category)
-            <a href="{{ route('site.category.show', ['slug' => $article->category->slug]) }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-primary/10 text-primary hover:bg-primary/20 transition-colors mb-6">
+            <a href="{{ route('site.category.show', ['slug' => $article->category->slug]) }}" title="Categoria: {{ $article->category->name }}" class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-primary/10 text-primary hover:bg-primary/20 transition-colors mb-6">
                 {{ $article->category->name }}
             </a>
         @endif
@@ -41,7 +41,7 @@
 
         <div class="flex items-center justify-center gap-4 text-gray-500 text-sm">
             @if($article->author)
-                <a href="{{ route('site.author.show', ['slug' => $article->author->slug]) }}" class="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="{{ route('site.author.show', ['slug' => $article->author->slug]) }}" title="Autor: {{ $article->author->name }}" class="flex items-center gap-2 hover:text-primary transition-colors">
                     @if($article->author->avatar_url)
                         <img src="{{ $article->author->avatar_url }}" alt="{{ $article->author->name }}" title="{{ $article->author->name }}" class="w-10 h-10 rounded-full object-cover">
                     @else
@@ -91,7 +91,7 @@
                     @if($article->author->bio)
                         <p class="text-gray-600 mb-4">{{ $article->author->bio }}</p>
                     @endif
-                    <a href="{{ route('site.author.show', ['slug' => $article->author->slug]) }}" class="inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80">
+                    <a href="{{ route('site.author.show', ['slug' => $article->author->slug]) }}" title="Ver todos os artigos de {{ $article->author->name }}" class="inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80">
                         Ver todos os artigos &rarr;
                     </a>
                 </div>

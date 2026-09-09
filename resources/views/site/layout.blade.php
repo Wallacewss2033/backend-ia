@@ -75,7 +75,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('site.index') }}" class="flex items-center gap-3">
+                    <a href="{{ route('site.index') }}" title="Página Inicial - {{ $currentSite->title }}" class="flex items-center gap-3">
                         @if($currentSite->logo_url)
                             <img src="{{ $currentSite->logo_url }}" alt="{{ $currentSite->title }}" title="{{ $currentSite->title }}" class="h-10 w-auto">
                         @else
@@ -86,13 +86,13 @@
 
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="{{ route('site.index') }}" class="text-gray-600 hover:text-primary font-medium transition-colors">Início</a>
+                    <a href="{{ route('site.index') }}" title="Página Inicial" class="text-gray-600 hover:text-primary font-medium transition-colors">Início</a>
                     @if(isset($categories))
                         @foreach($categories as $category)
-                            <a href="/categoria/{{ $category->slug }}" class="text-gray-600 hover:text-primary font-medium transition-colors">{{ $category->name }}</a>
+                            <a href="/categoria/{{ $category->slug }}" title="Categoria: {{ $category->name }}" class="text-gray-600 hover:text-primary font-medium transition-colors">{{ $category->name }}</a>
                         @endforeach
                     @endif
-                    <a href="/autores" class="text-gray-600 hover:text-primary font-medium transition-colors">Autores</a>
+                    <a href="/autores" title="Nossos Autores" class="text-gray-600 hover:text-primary font-medium transition-colors">Autores</a>
                 </nav>
 
                 <!-- Mobile Menu Button (Opcional, apenas estrutura visual) -->
