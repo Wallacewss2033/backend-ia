@@ -104,15 +104,28 @@
                     <a href="/autores" title="Nossos Autores" class="text-gray-600 hover:text-primary font-medium transition-colors">Autores</a>
                 </nav>
 
-                <!-- Mobile Menu Button (Opcional, apenas estrutura visual) -->
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="{{ route('site.index') }}" title="Página Inicial" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Início</a>
+                @if(isset($categories))
+                    @foreach($categories as $category)
+                        <a href="/categoria/{{ $category->slug }}" title="Categoria: {{ $category->name }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">{{ $category->name }}</a>
+                    @endforeach
+                @endif
+                <a href="/autores" title="Nossos Autores" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Autores</a>
+            </nav>
         </div>
     </header>
 
@@ -127,5 +140,19 @@
             <p>&copy; {{ date('Y') }} {{ $currentSite->title }}. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
