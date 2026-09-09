@@ -120,7 +120,7 @@
                     </div>
                 @endif
                 <div class="text-center sm:text-left">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Escrito por {{ $article->author->name }}</h3>
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Escrito por {{ $article->author->name }}</h2>
                     @if($article->author->bio)
                         <p class="text-gray-600 mb-4">{{ $article->author->bio }}</p>
                     @endif

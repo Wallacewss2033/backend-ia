@@ -42,11 +42,11 @@
                         </div>
 
                         <!-- Título -->
-                        <h3 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 leading-tight">
                             <a href="{{ route('site.article.show', ['slug' => $article->slug]) }}" class="hover:text-primary transition-colors">
                                 {{ $article->title }}
                             </a>
-                        </h3>
+                        </h2>
 
                         <!-- Resumo -->
                         <p class="text-gray-600 mb-4 flex-grow line-clamp-3">
@@ -81,7 +81,7 @@
             <svg class="mx-auto h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
-            <h3 class="mt-4 text-sm font-medium text-gray-900">Nenhum artigo encontrado nesta categoria</h3>
+            <h2 class="mt-4 text-sm font-medium text-gray-900">Nenhum artigo encontrado nesta categoria</h2>
             <p class="mt-1 text-sm text-gray-500">Tente explorar outras categorias no menu acima.</p>
         </div>
     @endif

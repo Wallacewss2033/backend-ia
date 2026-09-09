@@ -30,9 +30,9 @@
                         </div>
                     @endif
                     
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">
+                    <h2 class="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">
                         {{ $author->name }}
-                    </h3>
+                    </h2>
                     
                     @if($author->bio)
                         <p class="text-sm text-gray-500 mt-2 line-clamp-3">
@@ -53,7 +53,7 @@
             <svg class="mx-auto h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
-            <h3 class="mt-4 text-sm font-medium text-gray-900">Nenhum autor cadastrado</h3>
+            <h2 class="mt-4 text-sm font-medium text-gray-900">Nenhum autor cadastrado</h2>
             <p class="mt-1 text-sm text-gray-500">Ainda não há autores para exibir nesta página.</p>
         </div>
     @endif
