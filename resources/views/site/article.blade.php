@@ -26,22 +26,22 @@
 @section('head_extensions')
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
+  "@@context": "https://schema.org",
+  "@@type": "Article",
   "headline": "{{ $article->title }}",
   "image": "{{ $pageOgImage }}",
   @if($article->author)
   "author": {
-    "@type": "Person",
+    "@@type": "Person",
     "name": "{{ $article->author->name }}",
     "url": "{{ route('site.author.show', ['slug' => $article->author->slug]) }}"
   },
   @endif
   "publisher": {
-    "@type": "Organization",
+    "@@type": "Organization",
     "name": "{{ $currentSite->title }}",
     "logo": {
-      "@type": "ImageObject",
+      "@@type": "ImageObject",
       "url": "{{ $currentSite->logo_url ?? url('/') }}"
     }
   },
