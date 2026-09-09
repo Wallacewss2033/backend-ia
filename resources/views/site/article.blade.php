@@ -18,6 +18,39 @@
     @section('google_ads_conversion_label', $pageAdsConversion)
 @endif
 
+@if($article->author)
+    @section('author_name', $article->author->name)
+    @section('author_url', route('site.author.show', ['slug' => $article->author->slug]))
+@endif
+
+@section('head_extensions')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ $article->title }}",
+  "image": "{{ $pageOgImage }}",
+  @if($article->author)
+  "author": {
+    "@type": "Person",
+    "name": "{{ $article->author->name }}",
+    "url": "{{ route('site.author.show', ['slug' => $article->author->slug]) }}"
+  },
+  @endif
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ $currentSite->title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ $currentSite->logo_url ?? url('/') }}"
+    }
+  },
+  "datePublished": "{{ $article->published_at ? \Carbon\Carbon::parse($article->published_at)->toIso8601String() : '' }}",
+  "description": "{{ $pageDescription }}"
+}
+</script>
+@endsection
+
 @section('content')
 <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     

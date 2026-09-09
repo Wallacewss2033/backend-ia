@@ -12,7 +12,16 @@
         <meta property="og:image" content="@yield('og_image_url')">
     @endif
 
+    @hasSection('author_name')
+        <meta name="author" content="@yield('author_name')">
+        <meta property="article:author" content="@yield('author_url', url('/'))">
+    @endif
+
+    <meta property="article:publisher" content="{{ url('/') }}">
+
     <meta name="robots" content="@yield('robots_directives', 'index, follow')">
+
+    @yield('head_extensions')
 
     @if($currentSite->favicon_url)
         <link rel="icon" href="{{ $currentSite->favicon_url }}" type="image/x-icon">
