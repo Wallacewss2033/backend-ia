@@ -43,7 +43,7 @@
             @if($article->author)
                 <a href="{{ route('site.author.show', ['slug' => $article->author->slug]) }}" class="flex items-center gap-2 hover:text-primary transition-colors">
                     @if($article->author->avatar_url)
-                        <img src="{{ $article->author->avatar_url }}" alt="{{ $article->author->name }}" class="w-10 h-10 rounded-full object-cover">
+                        <img src="{{ $article->author->avatar_url }}" alt="{{ $article->author->name }}" title="{{ $article->author->name }}" class="w-10 h-10 rounded-full object-cover">
                     @else
                         <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
                             {{ substr($article->author->name, 0, 1) }}
@@ -62,7 +62,7 @@
     <!-- Imagem de Destaque -->
     @if($article->featured_image_url)
         <figure class="mb-12">
-            <img src="{{ $article->featured_image_url }}" alt="{{ $article->featured_image_alt ?? $article->title }}" class="w-full h-auto rounded-3xl shadow-sm object-cover max-h-[600px]">
+            <img src="{{ $article->featured_image_url }}" alt="{{ $article->featured_image_alt ?? $article->title }}" title="{{ $article->featured_image_alt ?? $article->title }}" class="w-full h-auto rounded-3xl shadow-sm object-cover max-h-[600px]">
             @if($article->featured_image_alt)
                 <figcaption class="text-center text-sm text-gray-500 mt-3">{{ $article->featured_image_alt }}</figcaption>
             @endif
@@ -80,7 +80,7 @@
         <div class="mt-16 pt-10 border-t border-gray-200">
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-gray-50 rounded-2xl p-8">
                 @if($article->author->avatar_url)
-                    <img src="{{ $article->author->avatar_url }}" alt="{{ $article->author->name }}" class="w-20 h-20 rounded-full object-cover">
+                    <img src="{{ $article->author->avatar_url }}" alt="{{ $article->author->name }}" title="{{ $article->author->name }}" class="w-20 h-20 rounded-full object-cover">
                 @else
                     <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-2xl">
                         {{ substr($article->author->name, 0, 1) }}

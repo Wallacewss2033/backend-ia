@@ -77,7 +77,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('site.index') }}" class="flex items-center gap-3">
                         @if($currentSite->logo_url)
-                            <img src="{{ $currentSite->logo_url }}" alt="{{ $currentSite->title }}" class="h-10 w-auto">
+                            <img src="{{ $currentSite->logo_url }}" alt="{{ $currentSite->title }}" title="{{ $currentSite->title }}" class="h-10 w-auto">
                         @else
                             <span class="text-2xl font-bold text-primary">{{ $currentSite->title }}</span>
                         @endif
