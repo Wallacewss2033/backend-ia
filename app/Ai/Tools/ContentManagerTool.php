@@ -32,21 +32,29 @@ class ContentManagerTool implements Tool
 
         if ($entity === 'article') {
             if ($action === 'create') {
-                $baseSlug = Str::slug($request['title']);
+                $title = $request['title'] ?? null;
+                $siteDomainId = $request['site_domain_id'] ?? null;
+                $content = $request['content'] ?? null;
+
+                if (!$title || !$siteDomainId || !$content) {
+                    return 'Erro: title, site_domain_id e content são obrigatórios para criar um artigo.';
+                }
+
+                $baseSlug = Str::slug($title);
                 $slug = $baseSlug;
                 $count = 1;
-                while (Article::where('site_domain_id', $request['site_domain_id'])->where('slug', $slug)->exists()) {
+                while (Article::where('site_domain_id', $siteDomainId)->where('slug', $slug)->exists()) {
                     $slug = $baseSlug . '-' . $count;
                     $count++;
                 }
 
                 $article = Article::create([
-                    'site_domain_id' => $request['site_domain_id'],
+                    'site_domain_id' => $siteDomainId,
                     'author_id' => $request['author_id'] ?? null,
                     'category_id' => $request['category_id'] ?? null,
-                    'title' => $request['title'],
+                    'title' => $title,
                     'slug' => $slug,
-                    'content' => $request['content'],
+                    'content' => $content,
                 ]);
                 return "Artigo '{$article->title}' criado com sucesso com ID {$article->id}.";
             }
@@ -91,17 +99,24 @@ class ContentManagerTool implements Tool
 
         if ($entity === 'author') {
             if ($action === 'create') {
-                $baseSlug = Str::slug($request['name']);
+                $name = $request['name'] ?? null;
+                $siteDomainId = $request['site_domain_id'] ?? null;
+
+                if (!$name || !$siteDomainId) {
+                    return 'Erro: name e site_domain_id são obrigatórios para criar um autor.';
+                }
+
+                $baseSlug = Str::slug($name);
                 $slug = $baseSlug;
                 $count = 1;
-                while (Author::where('site_domain_id', $request['site_domain_id'])->where('slug', $slug)->exists()) {
+                while (Author::where('site_domain_id', $siteDomainId)->where('slug', $slug)->exists()) {
                     $slug = $baseSlug . '-' . $count;
                     $count++;
                 }
 
                 $author = Author::create([
-                    'site_domain_id' => $request['site_domain_id'],
-                    'name' => $request['name'],
+                    'site_domain_id' => $siteDomainId,
+                    'name' => $name,
                     'slug' => $slug,
                 ]);
                 return "Autor '{$author->name}' criado com sucesso com ID {$author->id}.";
@@ -117,17 +132,24 @@ class ContentManagerTool implements Tool
 
         if ($entity === 'category') {
             if ($action === 'create') {
-                $baseSlug = Str::slug($request['name']);
+                $name = $request['name'] ?? null;
+                $siteDomainId = $request['site_domain_id'] ?? null;
+
+                if (!$name || !$siteDomainId) {
+                    return 'Erro: name e site_domain_id são obrigatórios para criar uma categoria.';
+                }
+
+                $baseSlug = Str::slug($name);
                 $slug = $baseSlug;
                 $count = 1;
-                while (Category::where('site_domain_id', $request['site_domain_id'])->where('slug', $slug)->exists()) {
+                while (Category::where('site_domain_id', $siteDomainId)->where('slug', $slug)->exists()) {
                     $slug = $baseSlug . '-' . $count;
                     $count++;
                 }
 
                 $category = Category::create([
-                    'site_domain_id' => $request['site_domain_id'],
-                    'name' => $request['name'],
+                    'site_domain_id' => $siteDomainId,
+                    'name' => $name,
                     'slug' => $slug,
                     'description' => $request['description'] ?? null,
                 ]);
@@ -144,9 +166,16 @@ class ContentManagerTool implements Tool
 
         if ($entity === 'site_domain') {
             if ($action === 'create') {
+                $domainUrl = $request['domain_url'] ?? null;
+                $title = $request['title'] ?? null;
+
+                if (!$domainUrl || !$title) {
+                    return 'Erro: domain_url e title são obrigatórios para criar um domínio.';
+                }
+
                 $domain = SiteDomain::create([
-                    'domain_url' => $request['domain_url'],
-                    'title' => $request['title'],
+                    'domain_url' => $domainUrl,
+                    'title' => $title,
                 ]);
                 return "Domínio '{$domain->domain_url}' criado com sucesso com ID {$domain->id}.";
             }
