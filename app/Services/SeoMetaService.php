@@ -6,8 +6,11 @@ use App\Repositories\Contracts\SeoMetaRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Traits\UploadsImagesToFirebase;
+
 class SeoMetaService
 {
+    use UploadsImagesToFirebase;
     protected SeoMetaRepositoryInterface $seoMetaRepository;
 
     public function __construct(SeoMetaRepositoryInterface $seoMetaRepository)

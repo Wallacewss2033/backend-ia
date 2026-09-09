@@ -14,7 +14,7 @@ class UpdateSeoMetaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'article_id' => 'sometimes|required|exists:articles,id|unique:seo_metas,article_id,' . $this->route('seo_meta'),
+            'article_id' => 'sometimes|required|exists:articles,id|unique:seo_metas,article_id,' . $this->route('id'),
             'meta_title' => 'sometimes|required|string|max:70',
             'meta_description' => 'sometimes|required|string|max:160',
             'canonical_url' => 'nullable|string|max:500',

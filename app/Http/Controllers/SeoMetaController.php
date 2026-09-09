@@ -49,4 +49,23 @@ class SeoMetaController extends Controller
         $this->seoMetaService->deleteSeoMeta($id);
         return response()->json(null, 204);
     }
+
+    public function uploadImage(\App\Http\Requests\UploadSeoMetaImageRequest $request): JsonResponse
+    {
+        try {
+            $result = $this->seoMetaService->uploadImageToFirebase(
+                $request->file('image'),
+                $request->input('type'),
+                'seo-metas'
+            );
+
+            return response()->json([
+                'message' => 'Upload realizado com sucesso!',
+                'url' => $result['url'],
+                'path' => $result['path']
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 422);
+        }
+    }
 }

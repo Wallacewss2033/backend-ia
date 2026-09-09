@@ -76,5 +76,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/seo-metas', [\App\Http\Controllers\SeoMetaController::class, 'store']);
     Route::get('/seo-metas/{id}', [\App\Http\Controllers\SeoMetaController::class, 'show']);
     Route::put('/seo-metas/{id}', [\App\Http\Controllers\SeoMetaController::class, 'update']);
+    Route::post('/seo-metas/upload-image', [\App\Http\Controllers\SeoMetaController::class, 'uploadImage']);
     Route::delete('/seo-metas/{id}', [\App\Http\Controllers\SeoMetaController::class, 'destroy']);
 });
