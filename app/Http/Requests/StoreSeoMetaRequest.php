@@ -15,7 +15,7 @@ class StoreSeoMetaRequest extends FormRequest
     {
         return [
             'article_id' => 'required|exists:articles,id|unique:seo_metas,article_id',
-            'meta_title' => 'required|string|max:70',
+            'meta_title' => 'required|string|max:60',
             'meta_description' => 'required|string|max:160',
             'canonical_url' => 'nullable|string|max:500',
             'og_image_url' => 'nullable|string|max:500',
