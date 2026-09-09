@@ -8,6 +8,12 @@
     <meta name="description" content="@yield('meta_description', $currentSite->description)">
     <link rel="canonical" href="@yield('canonical_url', request()->url())">
     
+    @hasSection('og_image_url')
+        <meta property="og:image" content="@yield('og_image_url')">
+    @endif
+
+    <meta name="robots" content="@yield('robots_directives', 'index, follow')">
+
     @if($currentSite->favicon_url)
         <link rel="icon" href="{{ $currentSite->favicon_url }}" type="image/x-icon">
     @endif
@@ -31,6 +37,13 @@
             gtag('js', new Date());
             gtag('config', '{{ $currentSite->google_ads_id }}');
         </script>
+        @hasSection('google_ads_conversion_label')
+            <script>
+                gtag('event', 'conversion', {
+                    'send_to': '{{ $currentSite->google_ads_id }}/@yield("google_ads_conversion_label")'
+                });
+            </script>
+        @endif
     @endif
     <!-- End Google Ads -->
 

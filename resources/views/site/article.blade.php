@@ -4,11 +4,19 @@
     $pageTitle = $article->seoMeta->meta_title ?? $article->title;
     $pageDescription = $article->seoMeta->meta_description ?? $article->summary;
     $pageCanonical = $article->seoMeta->canonical_url ?? request()->url();
+    $pageOgImage = $article->seoMeta->og_image_url ?? $article->featured_image_url ?? $currentSite->logo_url;
+    $pageRobots = $article->seoMeta->robots_directives ?? 'index, follow';
+    $pageAdsConversion = $article->seoMeta->google_ads_conversion_label ?? null;
 @endphp
 
 @section('title', $pageTitle . ' - ' . $currentSite->title)
 @section('meta_description', $pageDescription)
 @section('canonical_url', $pageCanonical)
+@section('og_image_url', $pageOgImage)
+@section('robots_directives', $pageRobots)
+@if($pageAdsConversion)
+    @section('google_ads_conversion_label', $pageAdsConversion)
+@endif
 
 @section('content')
 <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
