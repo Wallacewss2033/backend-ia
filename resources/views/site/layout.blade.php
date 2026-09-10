@@ -17,7 +17,27 @@
         <meta property="article:author" content="@yield('author_url', url('/'))">
     @endif
 
-    <meta property="article:publisher" content="{{ url('/') }}">
+    <meta name="publisher" content="{{ $currentSite->publisher_name ?? $currentSite->title }}">
+    <meta property="article:publisher" content="{{ $currentSite->publisher_name ?? $currentSite->title }}">
+
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "WebSite",
+      "name": "{{ $currentSite->title }}",
+      "url": "{{ url('/') }}",
+      "publisher": {
+        "@@type": "Organization",
+        "name": "{{ $currentSite->publisher_name ?? $currentSite->title }}"
+        @if($currentSite->logo_url)
+        ,"logo": {
+          "@@type": "ImageObject",
+          "url": "{{ $currentSite->logo_url }}"
+        }
+        @endif
+      }
+    }
+    </script>
 
     <meta name="robots" content="@yield('robots_directives', 'index, follow')">
 
