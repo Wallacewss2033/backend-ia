@@ -39,11 +39,13 @@
   @endif
   "publisher": {
     "@@type": "Organization",
-    "name": "{{ $currentSite->title }}",
-    "logo": {
+    "name": "{{ $currentSite->publisher_name ?? $currentSite->title }}"
+    @if($currentSite->logo_url)
+    ,"logo": {
       "@@type": "ImageObject",
-      "url": "{{ $currentSite->logo_url ?? url('/') }}"
+      "url": "{{ $currentSite->logo_url }}"
     }
+    @endif
   },
   "datePublished": "{{ $article->published_at ? \Carbon\Carbon::parse($article->published_at)->toIso8601String() : '' }}",
   "description": "{{ $pageDescription }}"

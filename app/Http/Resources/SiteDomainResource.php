@@ -13,6 +13,7 @@ class SiteDomainResource extends JsonResource
             'id' => $this->id,
             'domain_url' => $this->domain_url,
             'title' => $this->title,
+            'publisher_name' => $this->publisher_name,
             'description' => $this->description,
             'logo_url' => $this->logo_url,
             'favicon_url' => $this->favicon_url,

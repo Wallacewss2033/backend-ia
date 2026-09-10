@@ -16,6 +16,7 @@ class StoreSiteDomainRequest extends FormRequest
         return [
             'domain_url' => 'required|string|max:255|unique:sites_domains,domain_url',
             'title' => 'required|string|max:255',
+            'publisher_name' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'logo_url' => 'nullable|string|max:500',
             'favicon_url' => 'nullable|string|max:500',

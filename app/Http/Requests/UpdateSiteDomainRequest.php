@@ -16,6 +16,7 @@ class UpdateSiteDomainRequest extends FormRequest
         return [
             'domain_url' => 'sometimes|required|string|max:255|unique:sites_domains,domain_url,' . $this->route('id'),
             'title' => 'sometimes|required|string|max:255',
+            'publisher_name' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'logo_url' => 'nullable|string|max:500',
             'favicon_url' => 'nullable|string|max:500',

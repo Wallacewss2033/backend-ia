@@ -15,6 +15,7 @@ class SiteDomain extends Model
     protected $fillable = [
         'domain_url',
         'title',
+        'publisher_name',
         'description',
         'logo_url',
         'favicon_url',
