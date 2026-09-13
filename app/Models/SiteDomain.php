@@ -23,6 +23,7 @@ class SiteDomain extends Model
         'status',
         'dns_verified_at',
         'google_ads_id',
+        'google_adsense_id',
         'google_tag_manager_id',
     ];
 

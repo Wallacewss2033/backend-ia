@@ -21,6 +21,7 @@ class SiteDomainResource extends JsonResource
             'status' => $this->status,
             'dns_verified_at' => $this->dns_verified_at,
             'google_ads_id' => $this->google_ads_id,
+            'google_adsense_id' => $this->google_adsense_id,
             'google_tag_manager_id' => $this->google_tag_manager_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

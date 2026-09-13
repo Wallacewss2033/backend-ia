@@ -24,6 +24,7 @@ class UpdateSiteDomainRequest extends FormRequest
             'status' => 'nullable|in:draft,in_review,approved,rejected,suspended',
             'dns_verified_at' => 'nullable|date',
             'google_ads_id' => 'nullable|string|max:50',
+            'google_adsense_id' => 'nullable|string|max:50',
             'google_tag_manager_id' => 'nullable|string|max:50',
         ];
     }

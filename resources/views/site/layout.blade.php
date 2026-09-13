@@ -76,6 +76,13 @@
     @endif
     <!-- End Google Ads -->
 
+    <!-- Google Adsense -->
+    @if($currentSite->google_adsense_id)
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ $currentSite->google_adsense_id }}"
+     crossorigin="anonymous"></script>
+    @endif
+    <!-- End Google Adsense -->
+
     <!-- TailwindCSS via CDN para fins de exemplo -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
