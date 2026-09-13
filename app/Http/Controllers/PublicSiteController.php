@@ -139,4 +139,28 @@ class PublicSiteController extends Controller
         return response($content, 200)
             ->header('Content-Type', 'text/plain');
     }
+
+    public function privacyPolicy(Request $request): View
+    {
+        $categories = Category::where('site_domain_id', $request->attributes->get('current_site')->id)->orderBy('name')->get();
+        return view('site.privacy', compact('categories'));
+    }
+
+    public function termsOfUse(Request $request): View
+    {
+        $categories = Category::where('site_domain_id', $request->attributes->get('current_site')->id)->orderBy('name')->get();
+        return view('site.terms', compact('categories'));
+    }
+
+    public function aboutUs(Request $request): View
+    {
+        $categories = Category::where('site_domain_id', $request->attributes->get('current_site')->id)->orderBy('name')->get();
+        return view('site.about', compact('categories'));
+    }
+
+    public function contact(Request $request): View
+    {
+        $categories = Category::where('site_domain_id', $request->attributes->get('current_site')->id)->orderBy('name')->get();
+        return view('site.contact', compact('categories'));
+    }
 }

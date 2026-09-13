@@ -167,8 +167,14 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
             <p>&copy; {{ date('Y') }} {{ $currentSite->title }}. Todos os direitos reservados.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/sobre-nos" class="hover:text-primary transition-colors">Sobre Nós</a>
+                <a href="/contato" class="hover:text-primary transition-colors">Contato</a>
+                <a href="/termos-de-uso" class="hover:text-primary transition-colors">Termos de Uso</a>
+                <a href="/politica-de-privacidade" class="hover:text-primary transition-colors">Política de Privacidade</a>
+            </div>
         </div>
     </footer>
 
