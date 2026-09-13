@@ -118,4 +118,25 @@ class PublicSiteController extends Controller
 
         return view('site.article', compact('article', 'categories'));
     }
+
+    /**
+     * Retorna o arquivo ads.txt dinâmico para o Google Adsense.
+     */
+    public function adsTxt(Request $request)
+    {
+        /** @var \App\Models\SiteDomain $site */
+        $site = $request->attributes->get('current_site');
+
+        if (!$site || empty($site->google_adsense_id)) {
+            abort(404);
+        }
+
+        // Garante que o prefixo "ca-" não fique duplicado ou se o usuário inserir ca-pub-
+        $adsenseId = str_replace('ca-', '', $site->google_adsense_id);
+
+        $content = "google.com, {$adsenseId}, DIRECT, f08c47fec0942fa0";
+
+        return response($content, 200)
+            ->header('Content-Type', 'text/plain');
+    }
 }
