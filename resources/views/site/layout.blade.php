@@ -41,6 +41,10 @@
 
     <meta name="robots" content="@yield('robots_directives', 'index, follow')">
 
+    @if($currentSite->google_adsense_id)
+        <meta name="google-adsense-account" content="{{ str_starts_with($currentSite->google_adsense_id, 'ca-') ? $currentSite->google_adsense_id : 'ca-' . $currentSite->google_adsense_id }}">
+    @endif
+
     @yield('head_extensions')
 
     @if($currentSite->favicon_url)
