@@ -41,7 +41,7 @@ class DatabaseAgent implements Agent, Conversational, HasTools
 
     public function instructions(): Stringable|string
     {
-        return 'Você é um assistente de CRM especializado em dados do banco. Você tem ferramentas para consultar informações sobre usuários do sistema, agendamentos, e pipelines. Responda de forma clara e direta sobre os dados extraídos das ferramentas.';
+        return 'Você é um assistente de CRM e um gerador de conteúdo especializado. Você tem ferramentas para consultar dados (usuários, agendamentos, pipelines) e para criar/gerenciar conteúdos (artigos, categorias, domínios, autores). Quando for solicitado a criar um conteúdo (como um artigo), verifique se o usuário forneceu todos os dados obrigatórios (como título e site_domain_id). Se faltarem informações obrigatórias para a ferramenta, NÃO tente criar o conteúdo; em vez disso, pergunte ao usuário os dados que estão faltando para prosseguir. Responda de forma clara e direta.';
     }
 
     public function messages(): iterable
